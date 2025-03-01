@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <title>Mosquito Detection with YOLOv8</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center; /* 水平置中 */
+            align-items: center; /* 垂直置中 */
+            height: 100vh; /* 讓整個畫面充滿視窗高度 */
+            margin: 0; /* 移除預設邊距 */
+            flex-direction: column; /* 讓元素垂直排列 */
+        }
+
         canvas {
             display:block;
             border: 1px solid black;
             margin-top:10px;
+            max-width: 100%; /* 確保不超過螢幕寬度 */
+            height: auto; /* 保持原比例 */
         }
     </style>
 </head>
 <body>
-    <input id="uploadInput" type="file"/>
+    <input style="align-items: center;" id="uploadInput" type="file"/>
     <canvas></canvas>
     <script>
        /**
@@ -51,8 +62,8 @@
               const ctx = canvas.getContext("2d");
               ctx.drawImage(img,0,0);
               ctx.strokeStyle = "#00FF00";
-              ctx.lineWidth = 3;
-              ctx.font = "18px serif";
+              ctx.lineWidth = 50;
+              ctx.font = "80px serif";
               boxes.forEach(([x1,y1,x2,y2,label]) => {
                   ctx.strokeRect(x1,y1,x2-x1,y2-y1);
                   ctx.fillStyle = "#00ff00";
