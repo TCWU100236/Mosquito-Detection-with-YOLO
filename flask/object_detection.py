@@ -5,6 +5,7 @@ from PIL import Image
 import json
 
 app = Flask("Mosquito Detection", template_folder="./templates")
+app.config.from_object("config.DevelopmentConfig")
 
 @app.route("/")
 def root():
@@ -28,10 +29,7 @@ def detect():
     """
     buf = request.files["image_file"]
     boxes = detect_objects_on_image(Image.open(buf.stream))
-    return Response(
-      json.dumps(boxes),  
-      mimetype='application/json'
-    )
+    return Response(json.dumps(boxes), mimetype='application/json')
 
 
 def detect_objects_on_image(buf):
@@ -44,7 +42,7 @@ def detect_objects_on_image(buf):
     :return: Array of bounding boxes in format 
     [[x1,y1,x2,y2,object_type,probability],..]
     """
-    model = YOLO("best.pt")
+    model = YOLO("../model/runs/detect/train2/weights/best.pt")
     results = model.predict(buf)
     result = results[0]
     output = []
