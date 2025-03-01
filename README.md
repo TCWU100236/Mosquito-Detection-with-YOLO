@@ -15,8 +15,7 @@
 ## 網頁部署模型
 - 前端：HTML、CSS、Javascript
 - 後端：Python、Flask、YOLOv8
-![image](home.png)
-![image](detect.png)
+- ![image](home.png) ![image](detect.png)
 
 ## Reference
 - [How to Detect Objects in Images Using the YOLOv8 Neural Network](https://www.freecodecamp.org/news/how-to-detect-objects-in-images-using-yolov8/).
