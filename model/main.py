@@ -1,10 +1,16 @@
 from ultralytics import YOLO
 
 model = YOLO("yolov8m.pt")
+
+model.train(data="config.yaml",
+            imgsz = 640,
+            epochs = 1000,
+            batch = 5,
+            patience = 0,
+            optimizer = "SGD")
+
 # results = model.predict("cat_dog.jpg")
 # result = results[0]
-model.train(data="config.yaml", epochs=30)
-
 
 # for box in result.boxes:
 #     class_id = result.names[box.cls[0].item()]
