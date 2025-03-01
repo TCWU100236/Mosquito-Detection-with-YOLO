@@ -8,8 +8,11 @@
 - 使用 [Labelimg](https://github.com/HumanSignal/labelImg/releases) 進行圖片標註
 
 ## 訓練結果
+![image](model/runs/detect/train2/results.png)
+
+## 網頁部署模型
 
 
 ## Reference
-[How to Detect Objects in Images Using the YOLOv8 Neural Network](https://www.freecodecamp.org/news/how-to-detect-objects-in-images-using-yolov8/).
-[Mosquito-Detection-with-YOLO 簡報](https://drive.google.com/file/d/1_8xXwbp8ekniYjBi5ekNqXFr5FOIFzVa/view?usp=sharing)
+- [How to Detect Objects in Images Using the YOLOv8 Neural Network](https://www.freecodecamp.org/news/how-to-detect-objects-in-images-using-yolov8/).
+- [Mosquito-Detection-with-YOLO 簡報](https://drive.google.com/file/d/1_8xXwbp8ekniYjBi5ekNqXFr5FOIFzVa/view?usp=sharing)
